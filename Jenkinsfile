@@ -7,6 +7,13 @@ pipeline {
                 git branch: 'main', credentialsId: 'github_node01', url: 'https://github.com/ameedDevOps/node-app.git'
             }
         }
+        stage('NPM Install') {
+            steps {
+                sh 'npm install'
+                echo 'Project is building'
+                sleep 5
+            }
+        }
         stage('build') {
             steps {
                 echo 'Project is building'
