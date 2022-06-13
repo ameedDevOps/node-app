@@ -10,14 +10,11 @@ pipeline {
         stage('NPM Install') {
             steps {
                 sh 'npm install'
-                echo 'Project is building'
-                sleep 5
             }
         }
         stage('build') {
             steps {
-                echo 'Project is building'
-                sleep 5
+              sh 'npm build'
             }
         }
         stage('Run-Tests-Parellel') {
