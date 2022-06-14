@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build') {
             steps {
-              sh 'npm build'
+              sh 'npm publish'
             }
         }
         stage('Run-Tests-Parellel') {
