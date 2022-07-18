@@ -1,4 +1,4 @@
 {
     "jwtSecret": "mySecretToken",
-    "url":"mongodb://db_host:27017/test"
+    "url":"mongodb://db_host:27017"
 }
