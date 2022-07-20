@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const {
-  MONGO_USERNAME,
-  MONGO_PASSWORD,
+  MONGO_INITDB_ROOT_USERNAME,
+  MONGO_INITDB_ROOT_PASSWORD,
   MONGO_HOSTNAME,
   MONGO_PORT,
   MONGO_DB
@@ -13,8 +13,8 @@ const options = {
   reconnectInterval: 500,
   connectTimeoutMS: 10000,
 };
-//const config = require("config");
-//const db = config.get("url");
+const config = require("config");
+const db = config.get("url");
 
 const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
 
